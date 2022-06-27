@@ -1,0 +1,39 @@
+function comparaNumeros(num1, num2) {
+	let frase1 = primeiraFrase(num1, num2);
+	let frase2 = segundaFrase(num1, num2);
+
+	return `${frase1} ${frase2}`;
+}
+
+function primeiraFrase(num1, num2) {
+	let frase1 = `Os números ${num1} e ${num2}`;
+	let resposta = 'NÃO';
+
+	if (num1 === num2) {
+		resposta = '';
+	}
+
+	return `${frase1} ${resposta} SÃO IGUAIS.`;
+}
+
+function segundaFrase(num1, num2) {
+	let somaNumeros = num1 + num2;
+	let maior_10 = 'MENOR';
+	let menor_20 = 'MENOR';
+
+	if (somaNumeros > 10) {
+		maior_10 = 'MAIOR';
+	} else if (somaNumeros === 10) {
+        maior_10 = 'IGUAL';
+    }
+
+	if (somaNumeros > 20) {
+		menor_20 = 'MAIOR';
+	} else if (somaNumeros === 20) {
+        menor_20 = 'IGUAL';
+    }
+
+	return `A soma de ${num1} e ${num2} é ${somaNumeros} que é ${maior_10} do que 10 e ${menor_20} do que 20.`;
+}
+
+console.log(comparaNumeros(10, 10));
