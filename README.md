@@ -1,1 +1,1 @@
-# Compara_Numeros_JS_DIO
+# Comparador de Números JavaScript DIO.
